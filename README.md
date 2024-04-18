@@ -48,5 +48,5 @@ Eine detaillierte Dokumentation der API-Routen und ihrer Funktionen finden Sie i
 
 ## Autor
 
-Dieses Projekt wurde von Guelcan Kamat erstellt.
+Dieses Projekt wurde von Oskar, Lyne, Emanuele und Guelcan erstellt.
 
