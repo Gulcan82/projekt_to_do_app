@@ -1,5 +1,7 @@
 # Todo-App API
 
+Galina's Test Zeile
+
 Dieses Projekt implementiert eine RESTful API für eine einfache Todo-App. Die API wurde mit TypeScript, Node.js und Express entwickelt.
 
 ## Installation
