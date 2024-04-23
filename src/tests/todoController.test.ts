@@ -1,7 +1,8 @@
 // todoController.test.ts
 
 import request from 'supertest';
-import app from '..'; 
+import app from '../index';
+import { TodoStatus } from '../models/todoModel'; 
 
 
 describe('Todo Controller', () => {
