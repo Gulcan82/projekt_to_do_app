@@ -1,6 +1,15 @@
 {"todos": [
+<<<<<<< HEAD
     { "id": 1, "todo": "Buy groceries", "deadline": "2024-04-25", "assignee": "John", "owner": "Alice", "status": "not started"},
     { "id": 2, "todo": "Walk the dog", "deadline": "2024-04-26", "assignee": "John", "owner": "Alice", "status": "not started"}
     
   ]}
 
+=======
+      { "id": 1, "todo": "Buy groceries", "deadline": "2024-04-25", "assignee": "John", "owner": "Alice", "status": "not started"},
+      { "id": 2, "todo": "Walk the dog", "deadline": "2024-04-26", "assignee": "John", "owner": "Alice", "status": "not started"}
+      
+    ]}
+  
+  
+>>>>>>> 2b0721a14a296d23c5fa7442bdc34fcd241f0311
