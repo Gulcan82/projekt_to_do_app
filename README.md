@@ -1,4 +1,4 @@
-# Test Oskar
+# Todo-App API
 
 Dieses Projekt implementiert eine RESTful API für eine einfache Todo-App. Die API wurde mit TypeScript, Node.js und Express entwickelt.
 
