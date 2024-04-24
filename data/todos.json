@@ -1,0 +1,10 @@
+{"todos": [
+
+  { "id": 1, "todo": "Buy groceries", "deadline": "2024-04-25", "assignee": "John", "owner": "Alice", "status": "not started"},
+  { "id": 2, "todo": "Walk the dog", "deadline": "2024-04-26", "assignee": "John", "owner": "Alice", "status": "not started"}
+  
+]}
+
+
+   
+
