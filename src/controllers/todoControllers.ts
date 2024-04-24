@@ -4,6 +4,7 @@ import { Request, Response } from 'express';
 import { Todo, TodoStatus } from '../models/todoModel';
 import fs from 'fs';
 
+
 // Beispiel-Daten für die Todos (initial leer)
 let todos: Todo[] = [];
 
@@ -53,16 +54,46 @@ export const getAllTodos = (req: Request, res: Response): void => {
 // Controller-Funktion zum Lesen eines bestimmten Todos anhand der ID
 export const getTodoById = (req: Request, res: Response): void => {
   const id: number = parseInt(req.params.id);
+  const filePath = './data/todos.json';
+  
+
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+      return;
+    }
+    
+    try {
+      // Parsen der JSON-Daten
+      const todos = JSON.parse(data).todos
+
+      // Senden der Todos als Antwort
+      console.log(todos)
+
+      const todo: Todo | undefined = todos.find((t: any) => t.id === id);
+      if (!todo) {
+        res.status(404).json({ message: 'Todo not found' });
+      } else {
+        res.status(200).json({ todo });
+      }
+    
+     
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Error parsing JSON file' });
+    }
+  });
+
 
   // Todo mit der entsprechenden ID suchen
-  const todo: Todo | undefined = todos.find((t) => t.id === id);
+  
+  
 
-  if (!todo) {
-    res.status(404).json({ message: 'Todo not found' });
-  } else {
-    res.status(200).json({ todo });
-  }
-};
+  
+
+
+}
 
 // Controller-Funktion zum Aktualisieren eines Todos anhand der ID
 export const updateTodo = (req: Request, res: Response): void => {
