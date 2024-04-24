@@ -16,7 +16,7 @@ Verwendung
 Starten Sie den Server:
 
 npm start
-Die API ist jetzt 
+Die API ist jetzt http://localhost:4000verfügbar.
 Endpunkte
 GET /todos: Alle Todos abrufen
 GET /todos/:id: Ein spezifisches Todo abrufen
