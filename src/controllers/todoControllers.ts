@@ -102,6 +102,26 @@ export const updateTodo = (req: Request, res: Response): void => {
 
   // Todo mit der entsprechenden ID suchen
   const index: number = todos.findIndex((t) => t.id === id);
+  const filePath = './data/todos.json';
+
+  // Lesen der JSON-Datei
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+      return;
+    }
+    
+    try {
+      // Parsen der JSON-Daten
+      const todos = JSON.parse(data).todos;
+      // Senden der Todos als Antwort
+      res.status(200).json(todos);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Error parsing JSON file' });
+    }
+  });
 
   if (index === -1) {
     res.status(404).json({ message: 'Todo not found' });
@@ -115,6 +135,26 @@ export const updateTodo = (req: Request, res: Response): void => {
 // Controller-Funktion zum Löschen eines Todos anhand der ID
 export const deleteTodo = (req: Request, res: Response): void => {
   const id: number = parseInt(req.params.id);
+  const filePath = './data/todos.json';
+
+  // Lesen der JSON-Datei
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+      return;
+    }
+    
+    try {
+      // Parsen der JSON-Daten
+      const todos = JSON.parse(data).todos;
+      // Senden der Todos als Antwort
+      res.status(200).json(todos);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Error parsing JSON file' });
+    }
+  });
 
   // Todo mit der entsprechenden ID suchen und entfernen
   todos = todos.filter((t) => t.id !== id);
