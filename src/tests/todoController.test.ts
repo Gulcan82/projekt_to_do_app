@@ -2,7 +2,7 @@
 
 import request from 'supertest';
 import app from '../index';
-import { TodoStatus } from '../models/todoModel'; 
+
 
 
 describe('Todo Controller', () => {

@@ -1,11 +1,8 @@
-import express, { Router } from 'express';
-import {
-  createTodo,
-  getAllTodos,
-  getTodoById,
-  updateTodo,
-  deleteTodo
-} from '../controllers/todoControllers';
+import express, { Request, Response, Router } from 'express';
+import { createTodo, getAllTodos, getTodoById, updateTodo, deleteTodo,} from '../controllers/todoControllers';
+
+
+
 
 const router: Router = express.Router();
 
@@ -23,9 +20,10 @@ router.get('/todos/:id', getTodoById);
 // Aktualisieren eines Todos anhand der ID
 router.put('/todos/:id', updateTodo);
 
+// Hinzufügen von einzelnen Todos anhand der ID
+router.patch('/todos/:id');
+
 // Löschen eines Todos anhand der ID
 router.delete('/todos/:id', deleteTodo);
 
 export default router;
-
-
