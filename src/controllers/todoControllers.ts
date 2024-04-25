@@ -175,4 +175,7 @@ export const deleteTodo = (req: Request, res: Response): void => {
       res.status(200).json({ message: 'Todo deleted successfully' });
     });
   }
+
+  res.status(200).json({ message: 'Todo deleted successfully' });
+
 };

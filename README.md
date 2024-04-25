@@ -1,54 +1,32 @@
-# Todo-App API-Lyne
-
-
+# Todo-App API
 
 Dieses Projekt implementiert eine RESTful API für eine einfache Todo-App. Die API wurde mit TypeScript, Node.js und Express entwickelt.
 
-## Installation
+Installation
+Klonen Sie das Repository:
 
-1. Klonen Sie das Repository:
+git clonehttps://github.com/Emanuelo77/Projekt.git
+Wechseln Sie im Projektverzeichnis:
 
-    ```
-    git clone https://github.com/dein-benutzername/todo-app.git
-    ```
+cd todo-app
+Installieren Sie die Abhängigkeiten:
 
-2. Wechseln Sie in das Projektverzeichnis:
-
-    ```
-    cd todo-app
-    ```
-
-3. Installieren Sie die Abhängigkeiten:
-
-    ```
-    npm install
-    ```
-
-## Verwendung
-
+npm install
+Verwendung
 Starten Sie den Server:
 
-```
 npm start
-```
-
-Die API ist jetzt unter `http://localhost:4000` verfügbar.
-
-## Endpunkte
-
-- `GET /todos`: Alle Todos abrufen
-- `GET /todos/:id`: Ein spezifisches Todo abrufen
-- `POST /todos`: Ein neues Todo erstellen
-- `PUT /todos/:id`: Ein Todo aktualisieren
-- `DELETE /todos/:id`: Ein Todo löschen
-
+Die API ist jetzt http://localhost:4000verfügbar.
+Endpunkte
+GET /todos: Alle Todos abrufen
+GET /todos/:id: Ein spezifisches Todo abrufen
+POST /todos: Ein neues Todo erstellen
+PUT /todos/:id: Ein Todo aktualisieren
+DELETE /todos/:id: Ein Todo löschen
 Weitere Details zu den Endpunkten und ihren Parametern finden Sie in der Dokumentation der API-Routen.
 
-## Dokumentation
+Dokumentation
+Eine detaillierte Dokumentation der API-Routen und ihrer Funktionen finden Sie in der Datei API-DOKUMENTATION.md.
 
-Eine detaillierte Dokumentation der API-Routen und ihrer Funktionen finden Sie in der Datei `API-DOKUMENTATION.md`.
-
-## Autor
-
+Autor
 Dieses Projekt wurde von Oskar, Lyne, Emanuele und Guelcan erstellt.
-

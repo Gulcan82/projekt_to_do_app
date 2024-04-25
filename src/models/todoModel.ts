@@ -1,12 +1,24 @@
+
 interface Todo {
   id: number;
   todo: string;
   deadline: string;
   assignee: string;
   owner: string;
-  status: 'not started' | 'in progress' | 'ready for review' | 'in review' | 'done';
+  status: TodoStatus;
 }
 
-let TodoStatus: Todo[] = []; // Dies dient als einfache Datenbankersatz
+
+
+
+// Enum für den Status des Todos
+enum TodoStatus {
+  NOT_STARTED = "not started",
+  IN_PROGRESS = "in progress",
+  READY_FOR_REVIEW = "ready for review",
+  IN_REVIEW = "in review",
+  DONE = "done"
+}
+
 
 export { Todo, TodoStatus };
